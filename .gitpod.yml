@@ -4,6 +4,7 @@ tasks:
   - command: >
       setup/wagtail.sh && python manage.py runserver 0.0.0.0:8000
     name: python
+  - openMode: split-right
   - command: >
       setup/frontend.sh && cd frontend && npm run gulp watch
     name: node
