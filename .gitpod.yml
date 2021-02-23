@@ -1,7 +1,7 @@
 
 # Command to start on workspace startup
 tasks:
-  - init: >
+  - before: >
       setup/wagtail.sh && setup/frontend.sh
   - command: >
       python manage.py runserver 0.0.0.0:8000
