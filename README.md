@@ -2,6 +2,6 @@
 
 Inspired by: https://github.com/wagtail/wagtail-gitpod
 
-## Uses Codyhouse Framework
+## Frontend uses Codyhouse Framework
 
 https://codyhouse.co/
