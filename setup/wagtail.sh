@@ -11,6 +11,14 @@ then
     mv cms/config/* cms
     rm -R cms/config
     mv cms/manage.py .
+    mv cms/home/templates/home cms/templates
+    rm -R cms/home/templates
+    rm -R cms/home/static
+    rm cms/templates/home/welcome_page.html
+    mv cms/search/templates/search cms/templates
+    rm -R cms/search/templates
+    cp setup/base.template.html cms/templates/base.html
+    cp setup/home_page.template.html cms/templates/home/home_page.html
     sed -i -e "s/config.settings.dev/cms.settings.dev/g" manage.py
     sed -i -e "s/'home',/'cms.home',/g" cms/settings/base.py
     sed -i -e "s/'search',/'cms.search',/g" cms/settings/base.py

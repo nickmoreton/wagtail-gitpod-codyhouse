@@ -1,1 +1,15 @@
 
+# Command to start on workspace startup
+tasks:
+  - init: >
+      setup/frontend.sh && setup/wagtail.sh
+  - command: >
+      python manage.py runserver 0.0.0.0:8000
+    name: python
+  - command: >
+      cd frontend && npm run gulp watch
+# Ports to expose on workspace startup (optional)
+ports:
+  - port: 8000
+    onOpen: open-preview
+  - port: 3000
