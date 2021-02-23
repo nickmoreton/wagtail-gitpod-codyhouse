@@ -6,7 +6,7 @@ tasks:
     name: python
   - openMode: split-right
   - command: >
-      setup/frontend.sh && cd frontend && npm run gulp watch
+      setup/frontend.sh && cd frontend && sleep 5 && npm run gulp watch
     name: node
 # Ports to expose on workspace startup (optional)
 ports:
